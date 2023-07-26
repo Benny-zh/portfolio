@@ -101,7 +101,7 @@ html{
 /* Home section styling */
 .home-image{
      height: 100vh;
-     background: url("../images/BennyZhang.jpg") no-repeat center;
+     background: url("../images/personweb.webp") no-repeat center;
      filter: blur(10px);
      -webkit-filter: blur(10px);
 }
