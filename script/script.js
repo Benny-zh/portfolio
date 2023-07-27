@@ -24,18 +24,35 @@ $(document).ready(function(){
      });
 
      // typing animation script
-     var typed = new Typed(".typing", {
-          strings: ["Web Developer", "Back-end developer"],
-          typeSpeed: 100,
-          backSpeed: 60,
-          loop: true
-     });
-     var typed = new Typed(".typing-2", {
-          strings: ["Web Developer", "Back-end developer"],
-          typeSpeed: 100,
-          backSpeed: 60,
-          loop: true
-     });
+
+     if($(window).width()<690) {
+          var typed = new Typed(".typing", {
+               strings: ["Web Developer", "Back-end developer"],
+               typeSpeed: 100,
+               backSpeed: 60,
+               loop: false
+          });
+          var typed = new Typed(".typing-2", {
+               strings: ["Web Developer", "Back-end developer"],
+               typeSpeed: 100,
+               backSpeed: 60,
+               loop: false
+          });
+     }
+     else {
+          var typed = new Typed(".typing", {
+               strings: ["Web Developer", "Back-end developer"],
+               typeSpeed: 100,
+               backSpeed: 60,
+               loop: true
+          });
+          var typed = new Typed(".typing-2", {
+               strings: ["Web Developer", "Back-end developer"],
+               typeSpeed: 100,
+               backSpeed: 60,
+               loop: true
+          });
+     }; 
 
      // video popup script
      document.querySelectorAll('.myworks .popup-click').forEach(a => {

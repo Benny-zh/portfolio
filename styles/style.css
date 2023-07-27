@@ -580,6 +580,9 @@ footer span a:hover{
      }
 }
 @media (max-width: 1104px){
+     .home {
+          width: 70%;
+     }
      .about .about-content .left img{
           height: 350px;
           width: 350px;
@@ -667,6 +670,9 @@ footer span a:hover{
      .max-width{
           padding: 0 23px;
      }
+     .home {
+          min-height: 300px;
+     }
      .home .home-content .text-2{
           font-size: 60px;
      }
@@ -685,7 +691,7 @@ footer span a:hover{
 }
 @media (max-width: 500px){
      .home .home-content .text-2{
-          font-size: 50px;
+          font-size: 30px;
      }
      .home .home-content .text-3{
           font-size: 27px;
