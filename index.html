@@ -215,7 +215,7 @@
                     </div>
                     <div class="column right">
                          <div class="text">Message me</div>
-                         <form onsubmit="sendEmail(); reset(); return false">
+                         <form onsubmit="sendEmail(event); reset(); return false">
                               <div class="fields">
                                    <div class="field name">
                                         <input type="text" id="name" placeholder="Name" required>
@@ -228,7 +228,7 @@
                                    <input type="text" id="subject" placeholder="Subject" required>
                               </div>
                               <div class=" textarea">
-                                   <textarea id="message" cols="30" rows="10" placeholder="Describe project.." required></textarea>
+                                   <textarea id="message" cols="30" rows="10" placeholder="Message" required></textarea>
                               </div>
                               <div class="button">
                                    <button type="submit">Send message</button>
@@ -247,22 +247,23 @@
      <script src="script/script.js"></script>
      <script src="https://smtpjs.com/v3/smtp.js"></script>
      <script>
-          function sendEmail(){
+          function sendEmail(event) {
+               event.preventDefault();
+
+               var name = document.getElementById("name").value;
+               var email = document.getElementById("email").value;
+               var subject = document.getElementById("subject").value;
+               var messages = document.getElementById("message").value;
+               var body = "<b>Name: </b>" + name + "<b><br>Email: </b>" + email + "<b><br>Message: </b><br>" + messages;
+
                Email.send({
-                    secureToken: "14873271-937f-4f5c-b3a7-f548a2c1bc58",
-                    To : 'benny.zha@outlook.com',
-                    From : document.getElementById("email").value,
-                    Subject : "New Contact Form Enquiry",
-                    Body : "Name: " + document.getElementById("name").value
-                         + "<br> Email: " + document.getElementById("email").value
-                         + "<br> Subject: " + document.getElementById("subject").value
-                         + "<br> Message: " + document.getElementById("message").value
-               }).then(
-               message => alert("Message Sent Succesfully")
-               );
-          }    
+                    SecureToken: "59632506-fb4d-4f5d-bc38-c0f9090de209",
+                    To: "benny.zha@outlook.com",
+                    From: "contact@bennyzhangdev.com",
+                    Subject: subject,
+                    Body: body,
+               }).then((message) => alert("Message Sent Successfully"));
+        }    
      </script>
-
-
 </body>
 </html>
