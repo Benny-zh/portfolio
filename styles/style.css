@@ -659,6 +659,9 @@ footer span a:hover{
      .myworks .myworks-content .box{
           min-height: 350px;
      }
+     .myworks .myworks-content .popup-video video{
+          width: 70%;
+     }
      .skills .skills-content .column,
      .contact .contact-content .column{
           width: 100%;
@@ -688,6 +691,9 @@ footer span a:hover{
      .myworks .myworks-content .box{
           min-height: 0;
      }
+     .myworks .myworks-content .popup-video video{
+          width: 80%;
+     }
 }
 @media (max-width: 500px){
      .home .home-content .text-2{
@@ -695,5 +701,8 @@ footer span a:hover{
      }
      .home .home-content .text-3{
           font-size: 27px;
+     }
+     .myworks .myworks-content .popup-video video{
+          width: 90%;
      }
 }
