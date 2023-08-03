@@ -24,7 +24,6 @@ $(document).ready(function(){
      });
 
      // typing animation script
-
      if($(window).width()<690) {
           var typed = new Typed(".typing", {
                strings: ["Web Developer", "Back-end developer"],
